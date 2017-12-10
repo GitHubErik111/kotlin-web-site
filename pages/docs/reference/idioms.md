@@ -94,8 +94,11 @@ val map = mapOf("a" to 1, "b" to 2, "c" to 3)
 ### Accessing a map
 
 ``` kotlin
-println(map["key"])
-map["key"] = value
+// use a mutableMap, not just a map
+var map = mutableMapOf("key1" to value1, "key2" to value2, "key3" to value3)
+println(map["key1"])
+// reassign a new value to key1, in this case value2
+map["key1"] = value2
 ```
 
 ### Lazy property
